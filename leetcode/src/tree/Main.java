@@ -41,6 +41,8 @@ public class Main {
         map.put("InvertTree","翻转二叉树");
         map.put("KthSmallest","二叉搜索树中第K小的元素");
         map.put("LowestCommonAncestor","二叉搜索树的最近公共祖先");
+        map.put("BinaryTreePaths","二叉树的所有路径");
+        map.put("SumOfLeftLeaves","左叶子之和");
 
     }
 }

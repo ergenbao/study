@@ -1,6 +1,6 @@
 package sort;
 
-import org.junit.Test;
+
 
 import java.util.Arrays;
 
@@ -78,7 +78,7 @@ public class BigHeapSort {
 
 
 
-    @Test
+
     public void test() {
 //        int[] a = {87,45,78,32,17,65,53,9,122,133};
 //        heapSort(a);

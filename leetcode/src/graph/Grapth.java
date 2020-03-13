@@ -1,6 +1,5 @@
 package graph;
 
-import org.junit.Test;
 
 import java.util.*;
 
@@ -67,7 +66,7 @@ public class Grapth {
 
     }
 
-    @Test
+
    public void test() {
         Map<String,List<ENode>> graph = new HashMap<>();
        List<ENode> a_list = new ArrayList<>();

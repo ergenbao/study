@@ -12,7 +12,7 @@ import java.util.concurrent.CountDownLatch;
 public class CountDownLatchDemo {
 
      CountDownLatch countDownLatch = new CountDownLatch(4);
-    @org.junit.Test
+
    public  void test() throws InterruptedException {
         for (int i = 1; i <5 ; i++) {
             new Thread(() -> {

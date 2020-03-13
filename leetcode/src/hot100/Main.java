@@ -12,9 +12,12 @@ public class Main {
         Map<Integer,String> map = new HashMap<>(16);
         //key : hot100 leetcode 题号
         //value : 类名
-
+        //2、两数相加
+        map.put(2,"AddTwoNumbers");
         //4、两个有序数组中位数
         map.put(4,"FindMedianSortedArrays");
+        //5、最长回文子串
+        map.put(5,"LongestPalindrome");
         //10、正则表达式匹配
         map.put(10,"IsMatch");
         //17、电话号码的字母组合

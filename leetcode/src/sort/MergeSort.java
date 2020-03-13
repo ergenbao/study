@@ -1,6 +1,6 @@
 package sort;
 
-import org.junit.Test;
+
 
 import java.util.Arrays;
 
@@ -47,7 +47,6 @@ public class MergeSort {
         System.arraycopy(temp,0,arr,left,t);
     }
 
-   @Test
     public void test() {
         int[] a = {87,45,78,32,17,65,53,9,122,133};
        mergeSort(a);
