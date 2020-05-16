@@ -191,8 +191,7 @@ public class Main {
         //647、回文子串
         map.put(647,"CountSubStrings");
         //739、每日温度
-        map.put(739,"DailyTemperatures");
-        map.put(888,"aaaa");
- 
+//        map.put(739,"DailyTemperatures");
+        map.put(999,"test2");
     }
 }
