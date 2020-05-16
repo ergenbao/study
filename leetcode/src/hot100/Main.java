@@ -193,6 +193,6 @@ public class Main {
         //739、每日温度
         map.put(739,"DailyTemperatures");
         map.put(888,"aaaa");
-        map.put(999,"test2");
+ 
     }
 }
