@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @ClassName Permute
- * @Description 全排列
+ * @Description 全排列  给定一个 没有重复 数字的序列，返回其所有可能的全排列。
  * @Author JH
  * @Date 2019/9/4 15:56
  */

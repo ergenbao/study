@@ -11,16 +11,6 @@ public class FindPath {
 
 
 
-
-
-
-
-
-
-
-
-
-
     ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
     ArrayList<Integer> list = new ArrayList<Integer>();
     int sum = 0;

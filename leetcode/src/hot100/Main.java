@@ -9,71 +9,103 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-        Map<Integer,String> map = new HashMap<>(16);
+        Map<Integer,Object> map = new HashMap<>(16);
         //key : hot100 leetcode 题号
         //value : 类名
+        //1.两数之和
+        map.put(1,TwoSum.class);
         //2、两数相加
-        map.put(2,"AddTwoNumbers");
+        map.put(2,AddTwoNumbers.class);
+        //3、无重复字符的最长字串
+        map.put(3,LengthOfLongestSubstring.class);
         //4、两个有序数组中位数
-        map.put(4,"FindMedianSortedArrays");
+        map.put(4,FindMedianSortedArrays.class);
         //5、最长回文子串
-        map.put(5,"LongestPalindrome");
+        map.put(5,LongestPalindrome.class);
         //10、正则表达式匹配
-        map.put(10,"IsMatch");
+        map.put(10,IsMatch.class);
+        //11.盛最多水的容器
+        map.put(11,MaxArea.class);
+        //15.三数之和
+        map.put(15,ThreeSum.class);
         //17、电话号码的字母组合
-        map.put(17,"LetterCombinations");
+        map.put(17,LetterCombinations.class);
+        //19、删除链表的倒数第n个节点
+        map.put(19,RemoveNthFromEnd.class);
         //20、有效的括号
-        map.put(20,"IsValid");
+        map.put(20,IsValid.class);
+        //21、合并两个有序链表
+        map.put(21,MergeTwoLists.class);
         //22、括号生成
-        map.put(22,"GenerateParenthesis");
+        map.put(22,GenerateParenthesis.class);
         //23、合并K个排序链表
-        map.put(23,"MergeKLists");
+        map.put(23,MergeKLists.class);
+        //31、下一个排列
+        map.put(31,NextPermutation.class);
         //32、最长有效括号
-        map.put(32,"LongestValidParentheses");
+        map.put(32,LongestValidParentheses.class);
+        //33、搜索旋转排序数组
+        map.put(33,Search.class);
+        //34、在排序数组中查找元素的第一个和最后一个位置
+        map.put(34,SearchRange.class);
         //39、组合总数
-        map.put(39,"FindCombinationSum");
+        map.put(39,FindCombinationSum.class);
         //42、接雨水
-        map.put(42,"Trap");
+        map.put(42,Trap.class);
         //46、全排列
-        map.put(46,"Permute");
+        map.put(46,Permute.class);
         //48、旋转图像
-        map.put(48,"Rotate");
+        map.put(48,Rotate.class);
         //49、字母异位词分组
-        map.put(49,"GroupAnagrams");
+        map.put(49,GroupAnagrams.class);
         //53、最大子序和
-        map.put(53,"MaxSumArray");
+        map.put(53,MaxSumArray.class);
+        //55、跳跃游戏
+        map.put(55,CanJump.class);
         //56、合并区间
-         map.put(56,"Merge");
+         map.put(56,Merge.class);
         //62、不同路径
-         map.put(62,"UniquePaths");
-         //70、爬楼梯
-        map.put(70,"ClimbStairs");
+         map.put(62,UniquePaths.class);
+        //64、最小路径和
+         map.put(64,MinPathSum.class);
+        //70、爬楼梯
+        map.put(70,ClimbStairs.class);
         //72、编辑距离
-        map.put(72,"MinDistance");
+        map.put(72,MinDistance.class);
         //75、颜色分类
-        map.put(75,"SortColors");
+        map.put(75,SortColors.class);
         //76、最小覆盖子串
-        map.put(76,"MinWindow");
+        map.put(76,MinWindow.class);
         //78、子集
-        map.put(78,"SubSets");
+        map.put(78,SubSets.class);
         //79、单词搜索
-        map.put(79,"Exist");
+        map.put(79,Exist.class);
         //84、柱状图中最大的矩形
-        map.put(84,"LargestRectangleArea");
+        map.put(84,LargestRectangleArea.class);
         //85、最大矩形
-        map.put(85,"MaximalRectangle");
+        map.put(85,MaximalRectangle.class);
+        //94、二叉树的中序遍历
+        map.put(94,InorderTraversal.class);
         //96、不同的二叉搜索树
-        map.put(96,"NumsTrees");
+        map.put(96,NumsTrees.class);
         //98、验证二叉搜索树
-        map.put(98,"IsValidBST");
-        //114、二叉树展位链表
-        map.put(114,"Flatten");
+        map.put(98,IsValidBST.class);
+        //101、对称二叉树
+        map.put(101,IsSymmetric.class);
+        //102、二叉树的层序遍历
+        map.put(102,LevelOrder.class);
+        //104、二叉树的最大深度
+        map.put(104,MaxDepth.class);
+        //105、从前序与中序遍历序列构造二叉树
+        map.put(105,BuildTree.class);
+        //114、二叉树展开为链表
+        map.put(114,Flatten.class);
         //121、买卖股票的最佳时机
-        map.put(121,"MaxProfit");
+        map.put(121,MaxProfit.class);
         //124、二叉树的最大路径和
-        map.put(124,"MaxSumPath");
+        map.put(124,MaxSumPath.class);
         //128、最长连续序列
-        map.put(128,"LongestConsecutive");
+        map.put(128,LongestConsecutive.class);
         //139、单词拆分
         map.put(139,"WordBreak");
         //141、环形链表

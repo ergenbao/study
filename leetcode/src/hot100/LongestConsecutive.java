@@ -7,7 +7,7 @@ import java.util.Set;
 
 /**
  * @ClassName LongestConsecutive
- * @Description 最长序列字串
+ * @Description 最长序列字串 给定一个未排序的整数数组，找出最长连续序列的长度。
  * @Author JH
  * @Date 2019/9/12 14:38
  */

@@ -2,7 +2,8 @@ package hot100;
 
 /**
  * @ClassName Rotate
- * @Description 旋转图像 先i、j调换  再一行关于对称轴翻转
+ *  将图像顺时针旋转90°
+ * @Description 旋转图像 先i、j调换  再每一行关于对称轴翻转
  * @Author JH
  * @Date 2019/9/4 16:24
  */
@@ -10,7 +11,7 @@ public class Rotate {
     public void rotate(int[][] matrix) {
         int n = matrix.length;
 
-        // transpose matrix
+        // 转置矩阵
         for (int i = 0; i < n; i++) {
             for (int j = i; j < n; j++) {
                 int tmp = matrix[j][i];
@@ -18,7 +19,7 @@ public class Rotate {
                 matrix[i][j] = tmp;
             }
         }
-        // reverse each row
+        // 反转每一行
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n / 2; j++) {
                 int tmp = matrix[i][j];

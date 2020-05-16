@@ -6,8 +6,9 @@ package hot100;
  * @Author JH
  * @Date 2019/9/6 10:33
  */
-public class SortColors {
+public class    SortColors {
     public void sortColors(int[] nums) {
+        //l : 数字0的最右边界   r：数字2的最左边界
         int i=0,l=0,r = nums.length-1;
         while(i <= r) {
             if(i < l ||nums[i] ==1) {

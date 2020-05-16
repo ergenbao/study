@@ -51,4 +51,33 @@ public class LongestPalindrome {
         return s.substring(start,start+maxLen);
     }
 
+
+    public String test(String s) {
+        if("".equals(s)) {
+            return "";
+        }
+        int len =1,start =0,end=0;
+        for(int i=0;i<s.length();i++){
+            int l1 = getLength(s,i,i);
+            int l2 = getLength(s,i,i+1);
+            int longer = Math.max(l1,l2);
+            if(len < longer) {
+                len = longer;
+                start = i-(longer-1)/2;
+                end = i+longer/2;
+            }
+        }
+        return s.substring(start,end+1);
+    }
+    public int getLength(String s,int L,int R){
+        while(L>=0 && R<s.length() && s.charAt(L) == s.charAt(R)){
+            L--;
+            R++;
+        }
+        return L-R-1;
+    }
+
+
+
+
 }

@@ -28,33 +28,28 @@ public class DeleteNode {
 //    }
 
     static class  ListNode{
-        int data;
-        ListNode nextNode;
+        int val;
+        ListNode next;
     }
 
 
-    public void deleteNode(ListNode head,ListNode toDeleteNode) {
-        if(head == null || toDeleteNode == null) {
-            return;
+    public ListNode deleteNode(ListNode head,int  val) {
+        if(head == null ) {
+            return head;
         }
-        if (head == toDeleteNode) {
-            head = null;
-        }else {
-            //如果这个节点是尾节点
-            if(toDeleteNode.nextNode == null) {
-                ListNode node = head;
-                while (node.nextNode.nextNode !=null){
-                    node = node.nextNode;
-                }
-                node.nextNode = null;
-            }else {
-                toDeleteNode.data = toDeleteNode.nextNode.data;
-                toDeleteNode.nextNode = toDeleteNode.nextNode.nextNode;
-            }
-
+        if (head.val == val) {
+           return head.next;
+        }
+        ListNode cur = head;
+        while(cur.next != null && cur.next.val != val) {
+            cur = cur.next;
+        }
+        //而如果是cur.next==null导致的跳出循环，则说明链表中查询完毕也没有找到对应节点，不对链表进行修改。
+        if(cur.next != null) {
+            cur.next = cur.next.next;
         }
 
-
+        return head;
     }
 
 

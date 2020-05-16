@@ -2,7 +2,7 @@ package hot100;
 
 /**
  * @ClassName NumsTrees
- * @Description 不同的二叉搜索树
+ * @Description 不同的二叉搜索树 给定一个整数 n，求以 1 ... n 为节点组成的二叉搜索树有多少种？
  * @Author JH
  * @Date 2019/9/11 10:47
  */

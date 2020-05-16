@@ -12,6 +12,11 @@ public class JumpFloor {
         int [] DP = new int[3];
         DP[0] = 1;
         DP[1] = 2;
+//        for(int i = 2;i<target;i++) {
+//            DP[i] = DP[i-1]+DP[i-2];
+//        }
+//        return DP[target-1];
+
         DP[2] = DP[0]+DP[1];
         if(target <= 3){
             return DP[target -1];
@@ -25,6 +30,6 @@ public class JumpFloor {
     }
 
     public static void main(String[] args) {
-        System.out.println(jumpFloor(5));
+        System.out.println(jumpFloor(7));
     }
 }

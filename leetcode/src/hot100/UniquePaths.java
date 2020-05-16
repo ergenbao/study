@@ -1,7 +1,7 @@
 package hot100;
 
 /**
- * @ClassName UniquePaths
+ * @ClassName UniquePaths  m x n 阶矩阵，从左上角到达右下角的路径数
  * @Description 不同路径 动态规划 到达m、n点的方式  dp[m][n] = dp[m-1][n] + dp[m][n-1];
  * @Author JH
  * @Date 2019/9/5 13:56

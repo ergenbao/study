@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * @ClassName MinWindow
- * @Description 最小覆盖子串
+ * @Description 最小覆盖子串  给你一个字符串 S、一个字符串 T，请在字符串 S 里面找出：包含 T 所有字母的最小子串。
  * @Author JH
  * @Date 2019/9/6 11:13
  */
@@ -14,6 +14,7 @@ public class MinWindow {
         if(s.length() == 0 || t.length() == 0) {
             return "";
         }
+        //left：窗口的左角标  right：窗口又角标  start：最短覆盖字串的左角标
         int left = 0 ,right = 0,start = 0 ,minLength = Integer.MAX_VALUE;
         String res = s;
         //相当于两个计数器
@@ -23,7 +24,7 @@ public class MinWindow {
             int count = needs.getOrDefault(c,0);
             needs.put(c,count +1);
         }
-        //记录window中y已经有d多少个字符符合要求了
+        //记录window中已经有多少个字符符合要求了
         int match = 0;
         while(right < s.length())  {
            char c1 = s.charAt(right);
@@ -37,7 +38,7 @@ public class MinWindow {
            right ++;
            //window中的字符串已经符合needs的要求了
             while(match == needs.size()) {
-                //跟新结果
+                //更新结果
                 if(right - left < minLength) {
                     start = left;
                     minLength = right - left;

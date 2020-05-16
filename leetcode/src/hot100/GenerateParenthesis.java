@@ -1,6 +1,6 @@
 package hot100;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,20 +12,20 @@ import java.util.List;
 public class GenerateParenthesis {
 
     private static List<String> generateParenthesis(int n) {
-        LinkedList<LinkedList<String>> result = new LinkedList<>();
+        ArrayList<ArrayList<String>> result = new ArrayList<>();
         if (n == 0) {
-            return new LinkedList<>();
+            return new ArrayList<>();
         }
-        LinkedList<String> list0 = new LinkedList<>();
+        ArrayList<String> list0 = new ArrayList<>();
         //0组括号时
         list0.add("");
         result.add(list0);
-        LinkedList<String> list1 = new LinkedList<>();
+        ArrayList<String> list1 = new ArrayList<>();
         //1组括号时
         list1.add("()");
         result.add(list1);
         for (int i = 2; i <= n; i++) {
-            LinkedList<String> temp = new LinkedList<>();
+            ArrayList<String> temp = new ArrayList<>();
             for (int j = 0; j < i; j++) {
                 List<String> str1 = result.get(j);
                 List<String> str2 = result.get(i - 1 - j);

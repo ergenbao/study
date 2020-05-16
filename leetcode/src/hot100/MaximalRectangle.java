@@ -4,11 +4,15 @@ import java.util.Stack;
 
 /**
  * @ClassName MaximalRectangle
- * @Description 最大矩形
+ * @Description 最大矩形  给定一个仅包含 0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积。
+ *
+ * 将此问题转变为柱状图中的最大矩形
+ * 时间复杂度O（mn），空间O（n）
  * @Author JH
  * @Date 2019/9/10 16:45
  */
 public class MaximalRectangle {
+
 
     public int maximalRectangle(char[][] matrix) {
         if(matrix.length == 0) {
@@ -18,6 +22,7 @@ public class MaximalRectangle {
         int[] dp = new int[matrix[0].length];
         for(int i = 0;i<matrix.length;i++) {
             for(int j = 0;i<matrix[0].length;j++) {
+                //dp[j]代表当前角标，1的高度
                 dp[j] = matrix[i][j] == '1' ? dp[j] +1 : '0' ;
             }
             maxArea = Math.max(maxArea,largestRectangleArea(dp));
@@ -27,18 +32,22 @@ public class MaximalRectangle {
 
     private int largestRectangleArea(int[] heights) {
         int maxArea = 0 ;
+        //stack用于存储角标
         Stack<Integer> stack = new Stack<>();
+        //当前指针
         int p = 0 ;
         while(p < heights.length) {
             if(stack.isEmpty()) {
                 stack.push(p++);
             } else {
                 int top = stack.peek();
+                //如果此时柱状图是递增的，这时无法确定以heights[p]为高的矩形面积
                 if(heights[p] >= heights[top]) {
                     stack.push(p++);
                 } else {
-                    //此时的栈顶相当于此时要求面积的下标
+                    //左边第一个小于当前柱子的下标
                     int leftIndex = stack.isEmpty() ? -1 : stack.peek();
+                    //p:右边第一个小于当前柱子的下标
                     maxArea = Math.max(maxArea,(p-leftIndex-1) * heights[stack.pop()]);
                 }
 
