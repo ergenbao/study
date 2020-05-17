@@ -22,6 +22,8 @@ public class MajorityElement {
                 count --;
             }
         }
+        System.out.println("aaaaaa");
         return res;
+
     }
 }
